@@ -12,7 +12,7 @@ function changeImage() {
   setTimeout(changeImage, 4000); // Changes every 3 seconds
 }
 
-//hide adn shows the menu 
+//hide and shows the menu 
 $("#button").on("click", function (e){
   e.stopPropagation(); 
   $("#menu").toggleClass("hidden");
@@ -20,6 +20,16 @@ $("#button").on("click", function (e){
 
 $("body").on("click", function () {
   $("#menu").addClass("hidden");
+})
+
+//hide and shows the menu others screens
+$("#button2").on("click", function (e){
+  e.stopPropagation();
+  $("#menu2").toggleClass("hidden flex")
+})
+
+$("body").on("click", function () {
+  $("#menu2").addClass("hidden");
 })
 
 //closes menu on scroll
@@ -30,10 +40,8 @@ function closeMenuScroll ( ){
     var currentPosition = window.pageYOffset;
     if ( currentPosition > screenPosition){
       $("#menu").addClass("hidden");
+      $("#menu2").addClass("hidden");
     }
-
-    console.log("current "+ currentPosition);
-    console.log( "screen " + screenPosition);
 
 }
 

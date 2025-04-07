@@ -1,4 +1,5 @@
-$("#button2").on("click", function (){
+$("#button2").on("click", function (e){
+  e.stopPropagation();
   $("#menu2").toggleClass("hidden flex")
 })
 
@@ -11,14 +12,22 @@ function closeMenuScroll ( ){
   var screenPosition = window.pageYOffset;
   window.onscroll = function (){
     var currentPosition = window.pageYOffset;
-    if ( currentPosition > screenPosition){
+    if ( currentPosition - 250> screenPosition){
       $("#menu2").addClass("hidden");
     }
-    console.log("current "+ currentPosition);
-    console.log( "screen " + screenPosition);
-
   }
 
 }
 
+function imageSlide (){
+  if (count > 5) count = 2;
+  $(".next").on("click", ()=>{
+    var count = 2;
+    count++;
+    var images = `../assets/images/image${count}.jpg`;
+    $(".main").attr("src", images)
+  })
+}
+
+imageSlide();
 closeMenuScroll();
