@@ -45,7 +45,17 @@ function closeMenuScroll ( ){
 
 }
 
+function pageChange (){
+  var currentPath = window.location.pathname;
+  var basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+
+  $(".houses").on("click", function (){
+    window.location.href = basePath + "homedetails.html";
+  })
 }
+
+}
+pageChange ();
 changeImage();
 closeMenuScroll();
 

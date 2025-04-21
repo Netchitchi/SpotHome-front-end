@@ -3,224 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <title>Spot Home</title>
+
+  <style>
+    .navLinks:hover{
+      color: #1a75ff;
+    }
+
+    .card-responsive {
+      width: auto;
+    }
+
+    @media (min-width: 800px) {
+      .card-responsive {
+        width: 18rem;
+      }
+    }
+  </style>
+  
 </head>
+
+
 <body class="font-sans">
+  <!-- NavBar -->
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="../index.html">SpotHome</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link navLinks" aria-current="page" href="../index.html#offer">O que oferecemos?</a>
+            <a class="nav-link navLinks" href="../index.html#expertise">Porque nos escolher?</a>
+            <a class="nav-link navLinks" href="#">Contatos</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
 
-  <!-- nav bar -->
-  <nav class="flex items-center justify-between py-6 px-8">
-    <div>
-      <a href="../index.html"> <img src="../assets/images/logo.png" alt="Logo" class=" h-5 lg:h-10 object-cover"> </a>
+  <!-- Selection form -->
+  <section class="mt-4">
+    <h2 class="text-center">Features</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 mt-4">
+          <label for="">Property Type</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Choose</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 mt-4">
+          <label for="">Year built</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Choose</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 mt-4">
+          <label for="">Location</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Choose</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 mt-4">
+          <label for="">Year Built</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Choose</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 mt-4">
+          <label for=""> Property Type</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Choose</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 mt-4">
+          <label for=""> Property Type</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Choose</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-12 text-center mt-4">
+          <button type="button" class="btn btn-primary btn-sm" >Select</button>
+        </div>
+
+      </div>
+
     </div>
-    <ul id="menu2" class="hidden flex flex-col justify-center items-center h-[50vh] bg-gray-100 absolute right-0 top-16 w-60 shadow-lg  lg:flex lg:static lg:h-auto lg:flex-row lg:w-[80%] lg:bg-white lg:shadow-none lg:justify-end lg:space-x-6 lg:text-lg z-50" >
-      <li><a href="../index.html#offer" class=" block py-2 px-4 hover:text-blue-500">O que oferecemos?</a></li>
-      <li><a href="../index.html#expertise" class=" block py-2 px-4 hover:text-blue-500">Porque nos escolher?</a></li>
-      <li><a href="./about.html" class=" block py-2 px-4 hover:text-blue-500">Contatos</a></li>
-      <li> <a href="./cadastro.html"> <img src="../assets/images/icons/userIcon.png" alt="User" class="h-8"> </a> </li>
-    </ul>
-
-    <div id="button2" class="flex flex-col w-50 h-50 lg:hidden gap-1">
-      <span class="w-8 h-0.5 bg-black rounded-full"></span>
-      <span class="w-8 h-0.5 bg-black rounded-full"></span>
-      <span class="w-8 h-0.5 bg-black rounded-full"></span>
-    </div>
-
-  </nav>
+  </section>
   <hr class="border-gray-300"/>
 
-  <!-- Features -->
-  <div class="bg-gray-100 py-10 flex flex-col items-center">
-    <h2 class=" text-xl :text-3xl font-semibold">Features</h2>
+  <!-- cards -->
+  <section>
+    <div class="container-md">
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center mt-4">
+          <div class="card card-responsive">
+            <img src="../assets/images/image1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center mt-4 ">
+          <div class="card card-responsive">
+            <img src="../assets/images/image1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center mt-4">
+          <div class="card card-responsive">
+            <img src="../assets/images/image1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
 
-    <!-- the div that contains the fields -->
-    <div class="gap-3 mt-3 mx-7 w-4/5 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-6 md:mt-6 md:mx-10 md:w-4/5">
-      <!-- the text of options with the label  -->
-      <div class="flex flex-col space-y-2">
-        <label for="bathrooms" class="text-gray-600">Property Type</label>
-        <select id="bathrooms" class="border rounded-md px-3 py-4">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </div>
-      <!-- the text of options with the label  -->
-      <div class="flex flex-col space-y-2">
-        <label for="location" class="text-gray-600">Location</label>
-        <select id="location" class="border rounded-md px-3 py-4">
-          <option value="Foros de amora">Foros de amora</option>
-        </select>
-      </div>
-      <!-- the text of options with the label  -->
-      <div class="flex flex-col space-y-2">
-        <label for="year" class="text-gray-600">Year Built</label>
-        <select id="year" class="border rounded-md px-3 py-4">
-          <option value="1999">1999</option>
-          <option value="2000">2000</option>
-        </select>
-      </div>
-      <!-- the text of options with the label  -->
-      <div class="flex flex-col space-y-2">
-        <label for="bathrooms" class="text-gray-600">Property Type</label>
-        <select id="bathrooms" class="border rounded-md px-3 py-4">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </div>
-      <!-- the text of options with the label  -->
-      <div class="flex flex-col space-y-2">
-        <label for="bathrooms" class="text-gray-600">Property Type</label>
-        <select id="bathrooms" class="border rounded-md px-3 py-4">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </div>
-      <!-- the text of options with the label  -->
-      <div class="flex flex-col space-y-2">
-        <label for="bathrooms" class="text-gray-600">Property Type</label>
-        <select id="bathrooms" class="border rounded-md px-4 py-4">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center mt-4 ">
+          <div class="card card-responsive">
+            <img src="../assets/images/image1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <a href="./public/search.html" class=" mt-6 bg-blue-500 text-white py-3 px-6 rounded-full">Search</a>
-  </div>
+  </section>
+  
+  
 
-
-  <div class="flex flex-col justify-center items-center text-center py-10 w-[100%]">
-    <h2 class="text-3xl font-bold">Properties</h2>
-     <!-- firts house -->
-    <div class=" flex flex-col justify-center items-center ml-10 mt-10 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:w-[100%] ">
-      <div class="lg:place-self-center "> 
-        <img src="../assets/images/image5.jpg" alt="" class="w-4/5 h-[20%] object-cover mt-4 lg:w-2/4 lg:h-2/4">
-        <!-- card with the house informations -->
-        <div class="bg-white p-6 shadow-lg w-4/5 lg:w-2/3 lg:-mt-22 lg:p-2 lg:w-2/4">
-          <h2 class="text-xl font-semibold">Modern Family Home</h2>
-    
-          <div class="flex flex-row items-center space-x-2 text-gray-600 mt-2">
-            <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-            <p>Rua Damião de Góis 38, Alfornelos</p>
-          </div>
-          <div class="grid grid-cols-2 grid-rows-2 gap-4 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>3 Bedrooms</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>2 Bathrooms</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>Sq Ft: 3400</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>1 Garage</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div> 
-        <img src="../assets/images/image5.jpg" alt="" class="w-4/5 h-[20%] object-cover mt-4 lg:w-2/4 lg:h-2/4">
-        <!-- card with the house informations -->
-        <div class="bg-white p-6 shadow-lg w-4/5 lg:w-2/3 lg:-mt-22 lg:p-2 lg:w-2/4">
-          <h2 class="text-xl font-semibold">Modern Family Home</h2>
-    
-          <div class="flex flex-row items-center space-x-2 text-gray-600 mt-2">
-            <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-            <p>Rua Damião de Góis 38, Alfornelos</p>
-          </div>
-          <div class="grid grid-cols-2 grid-rows-2 gap-4 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>3 Bedrooms</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>2 Bathrooms</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>Sq Ft: 3400</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>1 Garage</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        <!-- firts house -->
-      
-      <div> 
-        <img src="../assets/images/image5.jpg" alt="" class="w-4/5 h-[20%] object-cover mt-4 lg:w-2/4 lg:h-2/4">
-        <!-- card with the house informations -->
-        <div class="bg-white p-6 shadow-lg w-4/5 lg:w-2/3 lg:-mt-22 lg:p-2 lg:w-2/4">
-          <h2 class="text-xl font-semibold">Modern Family Home</h2>
-    
-          <div class="flex flex-row items-center space-x-2 text-gray-600 mt-2">
-            <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-            <p>Rua Damião de Góis 38, Alfornelos</p>
-          </div>
-          <div class="grid grid-cols-2 grid-rows-2 gap-4 mt-4">
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>3 Bedrooms</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>2 Bathrooms</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>Sq Ft: 3400</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <img src="./assets/images/icons/locaIcon.png" alt="" class="h-5">
-              <p>1 Garage</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        
-    </div>
-  </div>
-
-  <footer class="bg-gray-100 text-black py-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left ">
-        <!-- Company Info -->
-        <div>
-          <h2 class="text-xl font-semibold">Spot Home</h2>
-          <p class="text-gray-400 mt-2">Delivering quality since 2025.</p>
-        </div>
-        
-        <!-- Navigation Links -->
-        <div>
-          <h3 class="text-lg font-semibold">Quick Links</h3>
-          <ul class="mt-2 space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-          </ul>
-        </div>
-        
-        <!-- Social Links -->
-    
-      </div>
-      
-      <!-- Copyright -->
-      <div class="text-center text-gray-500 text-sm mt-6 border-t border-gray-700 pt-4">
-        &copy; 2025 Company Name. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="../public/app.js"></script>
+  
 </body>
 </html>
